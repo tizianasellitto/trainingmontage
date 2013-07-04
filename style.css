@@ -49,17 +49,18 @@ body {
 #floater {
   float:left;
   height:50%;
-  margin-bottom:-120px;
+  margin-bottom:-180px;
 }
 
 .step {
   clear:both;
-  height:240px;
+  height:350px;
   position:relative;
 }
 
 #contribute {
-  font-size: smaller;
+  font-size: small;
   line-height: 1em;
-  text-align: right;
+  text-align: center;
+
 }

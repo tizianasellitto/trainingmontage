@@ -5,14 +5,19 @@ function findContainer(elem) {
   return elem;
 }
 
+
 $(document).ready(function() {
+  var toUnhide;
   $('.button').click(function(ev) {
     var next = ev.target.getAttribute('next');
     if (next) {
       $(findContainer(ev.target)).hide();
       $('#' + next).show();
+      if(typeof toUnhide !== 'undefined'){
+         $('#' + toUnhide).hide();
+       }
     } else {
-      var toUnhide = ev.target.getAttribute('unhide');
+      toUnhide = ev.target.getAttribute('unhide');
       $('#' + toUnhide).fadeIn();
     }
   });
