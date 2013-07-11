@@ -49,12 +49,12 @@ body {
 #floater {
   float:left;
   height:50%;
-  margin-bottom:-180px;
+  margin-bottom:-200px;
 }
 
 .step {
   clear:both;
-  height:350px;
+  height:400px;
   position:relative;
 }
 
