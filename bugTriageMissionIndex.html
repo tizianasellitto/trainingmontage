@@ -32,8 +32,8 @@
     <div id="triaging" class="step">
         <h1>How to Triage!</h1>
         <p>Bug Triaging is the process of moving bugs logically from state to state, so they get resolved in an efficient and easy-to-comprehend manner. </p>
-        <p>Go through the bug with status UNCONFIRMED and the component UNTRIAGED using this <a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=---&resolution=DUPLICATE&chfieldto=Now&chfield=%5BBug%20creation%5D&query_format=advanced&chfieldfrom=-60d&bug_status=UNCONFIRMED&component=Untriaged&product=Firefox&list_id=7134104" target="_blank">query</a>. Choose a bug from the list</p>
-        <p><span id="run-hint" class="hint">Refine the search to the bugs of your OS and read the summury to start understand the topic of the bug</span></p>
+        <p>Go through the bug with status UNCONFIRMED and the component UNTRIAGED using this <a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=---&resolution=DUPLICATE&chfieldto=Now&chfield=%5BBug%20creation%5D&query_format=advanced&chfieldfrom=-60d&bug_status=UNCONFIRMED&component=Untriaged&product=Firefox&list_id=7134104" target="_blank">query</a>. Choose a bug from the list.</p>
+        <p><span id="run-hint" class="hint">Refine the search to the bugs of your OS. Read the summaries to understand what the bugs might be about. This will help you choose one to triage.</span></p>
         <p>
         <span class="button" next="bug-choosen">I've choosen a bug</span>
         <span class="button" unhide="run-hint">I don't know what bug to choose</span>
@@ -42,16 +42,16 @@
 
     <div id="bug-choosen" class="step">
         <h1>You have choosen a bug</h1>
-        <p>Read the bug ( summary, description, comments, flag) aiming for replicating it</p>
-        <span class="button" next="bug-understood">I can understand the bug</span>
+        <p>Read the bug. Read its summary, description, comments. Do you understand it enough that you know how to try to replicate the bug?</p>
+        <span class="button" next="bug-understood">I understand what the bug is about</span>
         <span class="button" next="bug-notunderstood">I can't understand the bug</span>
         </p>
     </div>
 
     <div id="bug-notunderstood" class="step">
         <h1>I can't understand the bug</h1>
-        <p>comment, add need-info flag for the report and whatever additional details you need to understand</p>
-         <p><span id="hint-understand" class="hint">At the end of the bug page after the comments there is a check with written "Need more information from", you can select the reporter or add manually a mail address
+        <p>Leave a comment to ask for more information about the bug. You may want to use the needinfo flag. </p>
+         <p><span id="hint-understand" class="hint">Near the end of the bug page, after the comments, there is a checkbox labelled needinfo. When you check it, you can select the bug reporter, or manually add an email address to ask a person for more information.
          </span></p>
         <span class="button" next="bug-choosen">I've added the comment</span>
         <span class="button" unhide="hint-understand">I need a hint!</span>
@@ -60,7 +60,7 @@
 
     <div id="bug-understood" class="step">
         <h1>You can understand the bug</h1>
-        <p>Check if it's a duplicate</p>
+        <p>Check if the bug is a duplicate of an already existing bug.</p>
         <p><span id="hint-dulicate" class="hint">Search on similar terms in Bugzilla <a href="https://developer.mozilla.org/en-US/docs/Screening_duplicate_bugs" target="_blank">here</a> Tag it "dupeme?" in the whiteboard if you're not sure
         </span></p>
         <span class="button" next="bug-duplicate">It is a duplicate </span>
@@ -72,38 +72,38 @@
    
     <div id="bug-duplicate" class="step">
         <h1>The bug is a duplicate</h1>
-        <p> Close the Bug as RESOLVED DUPLICATE </p>
+        <p> Close the Bug as RESOLVED DUPLICATE. You should enter the duplicate bug number. Keep whichever bug was reported first, and has good information such as comments and attachments on the bugs. Be sure to thank the bug reporter and be polite, appreciate their efforts even though the bug report is not needed. </p>
         <span class="button" next="change-intro">I've done!</span>
         </p>
     </div>
     
     <div id="bug-notduplicate" class="step">
         <h1>The bug isn't a duplicate</h1>
-        <p>Check if it's a support question</p>
+        <p>Check if it's a support question.  Many bug reports are not about bugs but are for common issues answered in the Mozilla support forums.</p>
         <p>
-         <span id="hint-supportQuestion" class="hint"> Check if it's a support question (often malware, FF is slow reports)
+         <span id="hint-supportQuestion" class="hint"> Check if it's a support question (often malware, Firefox is slow reports)
          </span>
         </p>
-        <span class="button" next="bug-supportQustestion">It is a support question </span>
+        <span class="button" next="bug-supportQuestion">It is a support question </span>
         <span class="button" next="bug-notSupportQuestion">It's not a support question</span>
         <span class="button" unhide="hint-supportQuestion">I need a hint!</span>
         </p>
     </div>
     
     
-    <div id="bug-supportQustestion" class="step">
+    <div id="bug-supportQuestion" class="step">
         <h1>The bug is a support question</h1>
-        <p> Let the reporter know where to find help. Add link of <a href="https://support.mozilla.org/" target="_blank">support </a> Close the Bug as RESOLVED INVALID</p>
+        <p> Let the reporter know where to find help. Add link to <a href="https://support.mozilla.org/" target="_blank">support </a> Close the Bug as RESOLVED INVALID</p>
         <span class="button" next="change-intro">I've done!</span>
         </p>
     </div>
     
     <div id="bug-notSupportQuestion" class="step">
         <h1>The bug isn't a support question</h1>
-        <p>Keep on doing triaging and check if the bug needs a Testcase</p>
+        <p>Keep on doing triaging and check if the bug needs a testcase</p>
         <p> Ask the reporter for a reduced test case code or a URL. You could generate a test case and attach it.</p>
         <p>
-            <span id="hint-testcase" class="hint">A testcase can be an image, an .html page or an url depending on the specific bug.</span>
+            <span id="hint-testcase" class="hint">A testcase can be an image, an .html page or an url depending on the specific bug. </span>
         </p>
         <span class="button" next="bug-replicate">Replicate the bug</span>
         <span class="button" unhide="hint-testcase">I need a hint!</span>
@@ -122,14 +122,14 @@
         <h1>...so here we are :)</h1>
         <p>Can you reproduce the bug on the same OS?</p>
         <span class="button" next="bug-reproducible">I can reproduce the bug</span>
-        <span class="button" next="bug-notreproducible">I can't' reproduce the bug</span>
+        <span class="button" next="bug-notreproducible">I can't reproduce the bug</span>
         </p>
     </div>
     
     <div id="bug-reproducible" class="step">
         <h1>You can reproduce the bug</h1>
         <p>Comment that you can replicate the bug, add info you think can be useful; Add the build id of the firefox version and user agent used</p>
-        <p>If it isn't a Mozilla bug mark it NEW. Assign the bug into a product and component, or tag it needs-component. Tag the bug with other triage tasks that may be needed.</p>
+        <p>If it is a Mozilla bug mark it NEW. Assign the bug into a product and component, orif you aren't sure where it belongs, tag it needs-component. Tag the bug with other triage tasks that may be needed.</p>
         <p>
         <span id="hint-reproducible" class="hint"> For example User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko 20100101 Firefox/23.0
             buildID :20130708202947 (you can find the buildID typing about:config in the url bar and search for builID).</span>
@@ -142,7 +142,7 @@
     
     <div id="bug-notreproducible" class="step">
         <h1>You can't reproduce the bug</h1>
-        <p>Ask the reporter need-info (especially if it's an old bug ) to see if it's still valid and tag as needs-replication in the whtiteboard </p>
+        <p>Ask the reporter need-info (especially if it's an old bug ) to see if it's still valid and tag as needs-replication in the whiteboard </p>
         <p>or resolve it as WORKSFORME or tag it as need-replication</p>
         <span class="button" next="change-intro">I've done!</span>
         </p>
@@ -153,7 +153,7 @@
         <h1>And now? :)</h1>
         <p>Can you reproduce the bug on a different OS?</p>
             <span class="button" next="bug-reproducibleDiff">I can reproduce the bug</span>
-            <span class="button" next="bug-notreproducibleDiff">I can't' reproduce the bug</span>
+            <span class="button" next="bug-notreproducibleDiff">I can't reproduce the bug</span>
         </p>
     </div>
     
@@ -167,7 +167,7 @@
     
     <div id="bug-notreproducibleDiff" class="step">
         <h1>You can't reproduce the bug</h1>
-        <p>tag as needs-replication in the whtiteboard and leave a comment </p>
+        <p>tag as needs-replication in the whiteboard and leave a comment </p>
         <span class="button" next="bug-choosen">I've done</span>
         </p>
     </div>
