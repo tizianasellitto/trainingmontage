@@ -18,7 +18,7 @@ $(document).ready(function() {
        }
     } else {
       toUnhide = ev.target.getAttribute('unhide');
-      $('#' + toUnhide).fadeIn();
+      $('#' + toUnhide).toggle();
     }
   });
 });
