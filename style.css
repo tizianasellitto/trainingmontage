@@ -34,7 +34,8 @@ code {
 }
 
 .hint {
-    /*border: 1px dashed red;*/
+   /* border: 1px dashed red;*/
+    padding: 5px;
     display: none;
 }
 
@@ -46,15 +47,20 @@ body {
     font-size: x-large;
 }
 
+img {
+    padding-top:50px;
+    padding: 5px;
+}
+
 #floater {
   float:left;
-  height:50%;
+ /* height:50%;*/
   margin-bottom:-200px;
 }
 
 .step {
   clear:both;
-  height:400px;
+  height:700px;
   position:relative;
 }
 
@@ -62,5 +68,5 @@ body {
   font-size: small;
   line-height: 1em;
   text-align: center;
-
 }
+
