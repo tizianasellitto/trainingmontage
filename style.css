@@ -60,7 +60,7 @@ img {
 
 .step {
   clear:both;
-  height:700px;
+  min-height:500px;
   position:relative;
 }
 
