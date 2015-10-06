@@ -1,17 +1,19 @@
+* {
+    font-family: open sans;
+}
+
 .button {
-    border-radius: 10px;
-    border: 1px black solid;
-    padding: 10px;
+    border-radius: 3px;
+    border: 0px black solid;
+    padding: 15px;
     cursor: pointer;
-    box-shadow: 2px 2px 2px #888888;
+    box-shadow: 0px 0px 3px #888888;
     display: inline-block;
+    margin: 0px 10px;
 }
 
 .button:active {
-    box-shadow: 0px 0px 0px #888888;
-    top: 2px;
-    left: 2px;
-    position: relative;
+    box-shadow: 0px 0px 8px #888888;
     -moz-user-select: none;
 }
 
@@ -44,12 +46,13 @@ code {
 }
 
 body {
-    font-size: x-large;
+    font-size: large;
 }
 
 img {
-    padding-top:50px;
-    padding: 5px;
+    margin: 20px auto;
+    display: block;
+    
 }
 
 #floater {
@@ -68,5 +71,6 @@ img {
   font-size: small;
   line-height: 1em;
   text-align: center;
+  margin: 50px auto;
 }
 
